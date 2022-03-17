@@ -1,0 +1,44 @@
+<p>jay works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Employee Role</th>
+        <th scope="col">Lead</th>
+        <th scope="col">Cohort</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of employees">
+      <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.employeeId}}</td>
+        <td>{{data.employeeRole}}</td>
+        <td>{{data.projectLead}}</td>
+        <td>{{data.cohort}}</td>
+      </tr>
+    </tbody>
+</table>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Employee Role</th>
+        <th scope="col">Lead</th>
+        <th scope="col">Cohort</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of employees">
+      <tr *ngIf="data.cohort == 'TLC4'">
+        <td>{{data.name}}</td>
+        <td>{{data.employeeId}}</td>
+        <td>{{data.employeeRole}}</td>
+        <td>{{data.projectLead}}</td>
+        <td>{{data.cohort}}</td>
+      </tr>
+    </tbody>
+  </table>
